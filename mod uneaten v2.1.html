@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320, initial-scale=1, minimum-scale=0.45" />
+<title>Balist</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="wrapper">
+<div id="header">
+	<h1>Barry's Balist</h1>
+	<!-- <select>
+		<option>All Cities</option>
+		<option>Chicago</option>
+		<option>New York</option>
+	</select> -->
+	<form name = "toggles">
+		<input type="button" value="turn off neighborhoods" onclick="turnOffNeighborhood()">
+	</form>
+	<a>Settings</a>
+	
+</div>
+
+<div id="eaten">
+<h1>Eaten</h1>
+<p>Done that.</p>
+
+<ul id="eatenList">
+<li>
+	<a href="#" class="placeName">The Publican</a>
+	<span class="neighborhood">Fulton Market</span> 
+	<span class="note">Bacon</span>
+</li>
+<li>
+	<a href="#" class="placeName">Longman and Eagle</a>
+	<span class="neighborhood">Logan Square</span> 
+	<span class="note">Piglet</span>
+</li>
+<li>
+	<a href="#" class="placeName">DMK Burger Bar</a>
+	<span class="neighborhood">Lincoln Park</span> 
+	<span class="note">#3</span>
+</li>
+</ul>
+
+<ul id = "addEatenItem">
+<li class="add">
+	<form name="addToEaten">
+            <input type="text" name="newEntry">
+            <input type="button" value="Add to List" onclick="addEaten()">
+    </form>
+</li>
+
+</ul>
+</div>
+
+<div id="uneaten">
+<h1>Uneaten</h1>
+<p>Have to make it here</p>
+
+<ul id="uneatenList">
+<li>
+	<a href="#" class="placeName">Maude's Liquor Bar</a>
+	<span class="neighborhood">Logan Square</span> 
+	<span class="note">Heard amazing things</span>
+</li>
+<li>
+	<a href="#" class="placeName">The Bristol</a>
+	<span class="neighborhood">Logan Square</span> 
+	<span class="note">Heard amazing things</span>
+</li>
+<li>
+	<a href="#" class="placeName">Belly Q</a>
+	<span class="neighborhood">West Loop</span> 
+	<span class="note">Heard amazing things</span>
+</li>
+
+</ul>
+
+<ul id = "addUneatenItem">
+<li class="add">
+	<form name="addToUneaten">
+            <input type="text" name="newUneatenName">
+            <input type="text" name="newUneatenNote">
+            <input type="button" value="Add to List" onclick="addUneaten()">
+    </form>
+</li>
+
+</ul>
+
+<!-- <div id="result">
+	<p>hello</p>
+</div> -->
+
+<!-- <div id="detail">
+	<h1>Detail</h1>
+	<h2>The Publican</h2>
+	<div id = "placeDetail">
+		<span>837 W Fulton Market</span>
+		<span>Chicago, IL 60607</span>
+		<span>(312) 733-9555</span>
+	</div>
+	<a id="placeMap">
+		<img src="http://maps.google.com/maps/api/staticmap?center=41.886627%2C-87.648759&amp;language=en&amp;zoom=15&amp;markers=shadow%3Atrue%7Cicon%3Ahttp%3A%2F%2Fd1lf0h1wlh3cdl.cloudfront.net%2Fimg%2Fbiz_details_map_marker.png%7C41.886627%2C-87.648759&amp;client=gme-yelp&amp;sensor=false&amp;size=298x245&amp;signature=OFEdkhwywX7eJQVAGt48FHeHgfQ=" alt="Map of Business">
+	</a>
+
+</div> -->
+
+<div id="footer"><span>Copyright Barry McCarel 2012<span></div>
+
+</div>
+</body>
+
+</html>
