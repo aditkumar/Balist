@@ -69,7 +69,13 @@ li:before
 }
 
 .add:before{
-	content:'';
+	display: block;
+	content: '+';
+	font-weight: bold;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	font-size: 24px;
 }
 
 .placeName{

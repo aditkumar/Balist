@@ -10,6 +10,12 @@
 <script type="text/javascript" src="script.js"></script>
 
 <link rel="stylesheet" href="style.css">
+
+<script>
+$(document).ready(function(){
+	$(".neighborhood").hide();
+});
+</script>
 </head>
 
 <body>
@@ -51,8 +57,8 @@
 <ul id = "addEatenItem">
 <li class="add">
 	<form name="addToEaten">
-            <input type="text" name="newEatenName">
-            <input type="text" name="newEatenNote">
+            <input type="text" name="newEatenName" placeholder="Name">
+            <input type="text" name="newEatenNote" placeholder="Note">
             <input type="button" value="Add to List" onclick="addEaten()">
     </form>
 </li>
@@ -86,8 +92,8 @@
 <ul id = "addUneatenItem">
 <li class="add">
 	<form name="addToUneaten">
-            <input type="text" name="newUneatenName">
-            <input type="text" name="newUneatenNote">
+            <input type="text" name="newUneatenName" placeholder="Name">
+            <input type="text" name="newUneatenNote" placeholder="Note">
             <input type="button" value="Add to List" onclick="addUneaten()">
     </form>
 </li>
