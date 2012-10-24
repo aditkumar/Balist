@@ -1,10 +1,13 @@
 function addEaten() {
 
-	var listItem = document.addToEaten.newEntry.value;
+	var newEatenName = document.addToEaten.newEatenName.value;
+
+	var newEatenNote = document.addToEaten.newEatenNote.value;
 		
-	var listed = '<li> <a href="#" class="placeName">' + listItem + '</a> </li>';
+	var newEatenItem = '<li> <a href="#" class="placeName">' + newEatenName + '</a> <span class = "note">' + newEatenNote + '</span> </li>';
     
-    document.getElementById('eatenList').innerHTML = document.getElementById('eatenList').innerHTML + listed;
+    document.getElementById('eatenList').innerHTML = document.getElementById('eatenList').innerHTML + newEatenItem;
+
 
 }
 
