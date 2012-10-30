@@ -31,6 +31,12 @@ function addUneaten() {
 
 }
 
+// Test of deleting items from the list using jQuery
+function deleteItem(list, number){
+	$itemToDelete = $('list').eq(number-1);
+	$itemToDelete.hide();
+}
+
 function alertTest() {
 	alert ("Hello World!");
 }

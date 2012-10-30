@@ -11,30 +11,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 3021,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "script.js",
-			"settings":
-			{
-				"buffer_size": 962,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "style.css",
-			"settings":
-			{
-				"buffer_size": 2146,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -64,6 +40,9 @@
 	},
 	"file_history":
 	[
+		"/C/Users/bmccardel001/Documents/Coding/Balist/style.css",
+		"/C/Users/bmccardel001/Documents/Coding/Balist/index.html",
+		"/C/Users/bmccardel001/Documents/Coding/Balist/script.js",
 		"/C/Users/bmccardel001/Documents/misc coding stuff/Balist/Version built from Uneaten/mod uneaten v2.1.html",
 		"/C/Users/bmccardel001/Documents/misc coding stuff/Balist/Version built from Uneaten/script.js",
 		"/C/Users/bmccardel001/Documents/misc coding stuff/Balist/Version built from Uneaten/style.css",
@@ -88,6 +67,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"note",
+			"Note",
+			"note",
 			"Note",
 			"note",
 			"	<span class=\"note\">Heard amazing things</span>",
@@ -114,90 +96,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 3021,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								646,
-								646
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 265.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "script.js",
-					"settings":
-					{
-						"buffer_size": 962,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								409,
-								409
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "style.css",
-					"settings":
-					{
-						"buffer_size": 2146,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								505,
-								505
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 450.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
