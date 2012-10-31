@@ -41,7 +41,7 @@ h1
 {
 	margin: 0 0 16px;
 	padding: 0 0 16px;
-	border-bottom: 2px dashed #333;
+	border-bottom: 2px solid #333;
 }
 
 p
@@ -55,6 +55,10 @@ li
 	padding: 0 0 0 16px;
 	position: relative;
 }
+
+/*li:hover{
+	background: #DDD;
+}*/
 
 
 li:before
@@ -81,6 +85,9 @@ li:before
 .placeName{
 	font-weight: bold;
 }
+/*.placeName:hover{
+	background: #CCC;
+}*/
 
 .neighborhood {
 	color: #999;
@@ -115,7 +122,7 @@ li:before
 #header {
 	float: none;
 	width: 100%;
-	border-bottom: 4px dashed black;
+	border-bottom: 4px solid black;
 	padding-left: 0;
 	margin-left: 16px;
 
@@ -188,6 +195,73 @@ li:before
 	clear: both;
 	width: auto;
 }
+
+/* jQuery Popover Required style */
+	.popover {
+		position: absolute;
+	}
+	
+	/* KQuery Popover Aesthetic styles */
+	.popover {
+		background: #333;
+		color: #fff;
+		-moz-border-radius: 5px; /* FF1+ */
+		-webkit-border-radius: 5px; /* Saf3+, Chrome */
+		-khtml-border-radius: 5px; /* Konqueror */
+		border-radius: 5px; /* Standard. IE9 */
+		padding: 10px;
+		width: 200px;
+	}
+
+	#popover2 .after {
+		border-bottom: 10px solid transparent;
+		border-left: 15px solid #333;
+		content: '';
+		bottom: -10px;
+		height: 0;
+		margin-left: -5px;
+		left: 50%;
+		position: absolute;
+		width: 0;
+	}
+	
+	#popover5 .after,
+	#popover3.flopped-x .after {
+		border-bottom: 10px solid transparent;
+		border-left: 0;
+		border-right: 15px solid #333;
+		content: '';
+		bottom: -10px;
+		height: 0;
+		right: 10px;
+		position: absolute;
+		width: 0;
+	}
+	
+	#popover3 .after,
+	#popover5.flopped-x .after {
+		border-bottom: 10px solid transparent;
+		border-right: 0;
+		border-left: 15px solid #333;
+		content: '';
+		bottom: -10px;
+		height: 0;
+		left: 10px;
+		position: absolute;
+		width: 0;
+	}
+	
+	#popover4 .after {
+		border-top: 10px solid transparent;
+		border-left: 15px solid #333;
+		content: '';
+		top: -10px;
+		height: 0;
+		margin-left: -5px;
+		left: 50%;
+		position: absolute;
+		width: 0;
+	}
 
 
 /* iPhone [portrait + landscape] */

@@ -7,7 +7,10 @@
 <title>My Balist</title>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
 <script type="text/javascript" src="script.js"></script>
+<script src="jquery.ui.position.min.js"></script>
+ <script src="jquery.cf.popover.js"></script>
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,6 +19,37 @@ $(document).ready(function(){
 	$(".neighborhood").hide();
 });
 </script>
+
+<script type="text/javascript">
+		jQuery(function ($) {
+			$('#trigger1').popover();
+			
+			$('#trigger2').popover({
+				my: 'center bottom',
+				at: 'center top',
+				offset: '0 -12px'
+			});
+			
+			$('#trigger3').popover({
+				my: 'left bottom',
+				at: 'right top',
+				offset: '-5px -5px'
+			});
+			
+			$('#trigger5').popover({
+				my: 'right bottom',
+				at: 'left top',
+				offset: '-5px -5px'
+			});
+			
+			$('#trigger4').popover({
+				my: 'center top',
+				at: 'center bottom',
+				offset: '0 12px'
+			});
+		});
+	</script>
+	
 </head>
 
 <body>
