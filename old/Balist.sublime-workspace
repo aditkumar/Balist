@@ -5,42 +5,38 @@
 		[
 			[
 				"inline",
-				"inline"
+				"inline-block"
+			],
+			[
+				"balist",
+				"balistList"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "/C/Users/bmccardel001/Dropbox/Coding/Balist Beta 3/index.html",
 			"settings":
 			{
-				"buffer_size": 3887,
-				"line_ending": "Windows"
+				"buffer_size": 10851,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/Users/bmccardel001/Documents/Coding/jquery-popover/demo.html",
+			"file": "/C/Users/bmccardel001/Dropbox/Coding/Balist Beta 3/css/main.css",
 			"settings":
 			{
-				"buffer_size": 4340,
-				"line_ending": "Windows"
+				"buffer_size": 2020,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "style.css",
+			"file": "/C/Users/bmccardel001/Dropbox/Coding/Balist Beta 3/js/main.js",
 			"settings":
 			{
-				"buffer_size": 3627,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "script.js",
-			"settings":
-			{
-				"buffer_size": 1478,
-				"line_ending": "Windows"
+				"buffer_size": 1409,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -72,8 +68,23 @@
 	},
 	"file_history":
 	[
-		"/C/Users/bmccardel001/Documents/Coding/Balist/style.css",
+		"/C/Users/bmccardel001/Dropbox/Coding/Balist Beta 3/css/main.css",
 		"/C/Users/bmccardel001/Documents/Coding/Balist/index.html",
+		"/C/Users/bmccardel001/Documents/Coding/Balist/style.css",
+		"/C/Users/bmccardel001/Documents/Coding/Balist Beta 3/index.html",
+		"/C/Users/bmccardel001/Documents/Coding/McCardel.us/dallas_restaurant_balist.html",
+		"/C/Users/bmccardel001/Documents/Coding/Balist Beta 3/css/main.css",
+		"/C/Users/bmccardel001/Documents/Coding/Balist Beta 3/js/main.js",
+		"/C/Users/bmccardel001/Documents/Coding/McCardel.us/mcStyle.css",
+		"/C/Users/bmccardel001/Documents/Coding/initializr test/css/main.css",
+		"/C/Users/bmccardel001/Documents/Coding/initializr test/index.html",
+		"/C/Users/bmccardel001/Documents/Coding/McCardel.us/script.js",
+		"/C/Users/bmccardel001/Documents/Coding/McCardel.us/index.html",
+		"/C/Users/bmccardel001/Documents/Coding/McCardel.us/balist.html",
+		"/C/Users/bmccardel001/Documents/Coding/McCardel.us/bootstrapTest.html",
+		"/C/Users/bmccardel001/Documents/Coding/Balist/style2.css",
+		"/C/Users/bmccardel001/Documents/Coding/jquery-popover/demo.html",
+		"/C/Users/bmccardel001/Documents/Coding/Balist/index_v2.html",
 		"/C/Users/bmccardel001/Documents/Coding/Balist/script.js",
 		"/C/Users/bmccardel001/Documents/misc coding stuff/Balist/Version built from Uneaten/mod uneaten v2.1.html",
 		"/C/Users/bmccardel001/Documents/misc coding stuff/Balist/Version built from Uneaten/script.js",
@@ -99,6 +110,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"square",
+			"<div class=\"span4\">\n                            <h1>Hello World</h1>\n                        </div>",
+			">\n",
 			"dashed",
 			"note",
 			"Note",
@@ -129,77 +143,51 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "/C/Users/bmccardel001/Dropbox/Coding/Balist Beta 3/index.html",
 					"settings":
 					{
-						"buffer_size": 3887,
+						"buffer_size": 10851,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1130,
-								1130
+								5454,
+								5454
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 219.0,
+						"translation.y": 1530.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/C/Users/bmccardel001/Documents/Coding/jquery-popover/demo.html",
+					"file": "/C/Users/bmccardel001/Dropbox/Coding/Balist Beta 3/css/main.css",
 					"settings":
 					{
-						"buffer_size": 4340,
+						"buffer_size": 2020,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3716,
-								3716
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1884.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "style.css",
-					"settings":
-					{
-						"buffer_size": 3627,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2284,
-								2284
+								1335,
+								1335
 							]
 						],
 						"settings":
@@ -208,30 +196,31 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2814.0,
+						"translation.y": 1127.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "script.js",
+					"buffer": 2,
+					"file": "/C/Users/bmccardel001/Dropbox/Coding/Balist Beta 3/js/main.js",
 					"settings":
 					{
-						"buffer_size": 1478,
+						"buffer_size": 1409,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								85,
+								85
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

@@ -1,0 +1,172 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+ 
+
+#header a {
+	color: #696969;
+}
+
+#header a:hover {
+	color: #F2614B;
+}
+
+#header h1 {
+	margin: 4px auto 8px auto;
+	/*color: #1B7EE0;*/
+}
+
+#topBox {
+/* 	margin-top: 8px; */
+	margin-bottom: 30px;
+}
+
+#listOfBalists ul {
+	padding-left: 10px;
+	margin-left: 10px;
+}
+
+.balist {
+	width: 100%;
+	max-width: 800px;
+	min-width: 400px;
+	/*width: 800px;*/
+	margin-top: 8px;
+	margin-left: 0px;
+	float: left;
+}
+
+.balist * {
+	margin:0;
+	position: relative;
+}
+
+.balist h1 {
+	font-size:20px;
+	margin: 0px;
+}
+
+.balistNote {
+	font-size: .8em;
+	margin-left: 8px;
+}
+
+.balistHead{
+	margin: 0 0 8px;
+	border-bottom: 4px double #F2614B;
+	width: 100%;
+}
+
+.balist h2 {
+	font-size:18px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.listTop {
+	border-bottom: 1px solid #F2614B;
+	margin: 0 0 8px;
+	padding: 0 0 0 8px;
+}
+
+.listTop h2 {
+	display: inline;
+}
+
+.listTop a {
+	float: right;
+	margin-top: 12px;
+	color: #696969;
+}
+
+/*.listTop a:before {
+	content: "";
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #F2614B;
+	position: absolute;
+	right: 18px;
+	top: 5px;
+
+}*/
+
+.balistLeft{
+	float:left;
+	width: 42%;
+	padding-right: 16px;
+}
+
+.balistRight{
+	float:left;
+	width: 42%;
+	padding-left: 16px;
+}
+
+.balist ul{
+	padding-left: 16px;
+}
+
+.balist li {
+	margin: 0 0 4px;
+	list-style: square;
+	color: #1B7EE0;
+	padding-left:0px;
+}
+
+.balist li span{
+	color:#696969;
+}
+
+.balist li p{
+	color:#696969;
+}
+
+.itemTitle {
+	font-weight: bold;
+}
+
+.note {
+	font-size: .9em;
+	line-height: 1.1em;
+}
+
+.addBox {
+	width: 92%;
+}
+.addForm {
+	display: inline-block;
+	width: 100%;
+}
+
+.addForm:before{
+	display: block;
+	content: '+';
+	font-weight: bold;
+	position: absolute;
+	top: 4px;
+	left: -5px;
+	font-size: 24px;
+	color: #AAA;
+}
+
+.addName{
+	height: 1em; 
+	background-color: #FFD; 
+	margin-left: 16px;
+	width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+

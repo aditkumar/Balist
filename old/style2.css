@@ -1,0 +1,277 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body
+{
+	font: 13px/18px sans-serif;
+	color: #333;
+	background-color: #fff;
+	padding: 16px;
+}
+
+a
+{
+	text-decoration: underline;
+/* 	font-weight: bold; */
+	color: inherit;
+}
+
+a:hover
+{
+	color: #333;
+}
+
+div
+{
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 16px;
+	width: 33%;
+	float: left;
+}
+
+h1
+{
+	margin: 0 0 16px;
+	padding: 0 0 16px;
+	border-bottom: 2px solid #333;
+}
+
+p
+{
+	margin: 0 0 16px;
+}
+
+li
+{
+	list-style: none;
+	padding: 0 0 0 16px;
+	position: relative;
+}
+
+/*li:hover{
+	background: #DDD;
+}*/
+
+
+li:before
+{
+	display: block;
+	content: '-';
+	font-weight: bold;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	font-size: 24px;
+}
+
+.add:before{
+	display: block;
+	content: '+';
+	font-weight: bold;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	font-size: 24px;
+}
+
+.placeName{
+	font-weight: bold;
+}
+/*.placeName:hover{
+	background: #CCC;
+}*/
+
+.neighborhood {
+	color: #999;
+	font-size: 9px;
+}
+
+.note {
+	color: #999;
+	font-size: 11px;
+	line-height: 13px;
+	display: block;
+	position: relative;
+	top: -2px;
+}
+
+.add {
+	color: #999;
+	font-style: italic;
+}
+
+.add a {
+	text-decoration: none;
+}
+
+#wrapper {
+	margin-left: auto;
+	margin-left:auto;
+	width: 100%;
+	max-width: 800px;
+}
+
+#header {
+	float: none;
+	width: 100%;
+	border-bottom: 4px solid black;
+	padding-left: 0;
+	margin-left: 16px;
+
+}
+
+#header h1 {
+	border: none;
+	display: inline;
+}
+
+#header select {
+	display: block;
+	margin-top: 8px;
+	line-height: 24px;
+	font-size: 16px;
+	width: 200px;
+	border: 1px #999;
+}
+
+#header a {
+	float: right;
+}
+
+#eaten {
+	color: #a259a9;
+	width: 50%;
+}
+#eaten h1 {
+	border-color: #a259a9;
+}
+
+#uneaten {
+	color: #60961b;
+	width: 50%;
+}
+#uneaten h1 {
+	border-color: #60961b;
+}
+
+#detail {
+	color: #F2614B;
+	width: 50%;
+}
+#detail h1 {
+	border-color: #F2614B;
+}
+#detail h2 {
+	margin-bottom: 8px;
+}
+
+#placeDetail {
+	color: black;
+}
+
+#placeDetail span {
+	display: block;
+}
+#placeMap {
+	float: right;
+}
+
+#footer
+{
+	margin: 32px 16px 0;
+	padding: 16px 0 0;
+	text-align: right;
+/* 	border-top: 1px solid #aaa; */
+	color: #aaa;
+	float: none;
+	clear: both;
+	width: auto;
+}
+
+/* jQuery Popover Required style */
+	.popover {
+		position: absolute;
+	}
+	
+	/* KQuery Popover Aesthetic styles */
+	.popover {
+		background: #333;
+		color: #fff;
+		-moz-border-radius: 5px; /* FF1+ */
+		-webkit-border-radius: 5px; /* Saf3+, Chrome */
+		-khtml-border-radius: 5px; /* Konqueror */
+		border-radius: 5px; /* Standard. IE9 */
+		padding: 10px;
+		width: 200px;
+	}
+
+	#popover2 .after {
+		border-bottom: 10px solid transparent;
+		border-left: 15px solid #333;
+		content: '';
+		bottom: -10px;
+		height: 0;
+		margin-left: -5px;
+		left: 50%;
+		position: absolute;
+		width: 0;
+	}
+	
+	#popover5 .after,
+	#popover3.flopped-x .after {
+		border-bottom: 10px solid transparent;
+		border-left: 0;
+		border-right: 15px solid #333;
+		content: '';
+		bottom: -10px;
+		height: 0;
+		right: 10px;
+		position: absolute;
+		width: 0;
+	}
+	
+	#popover3 .after,
+	#popover5.flopped-x .after {
+		border-bottom: 10px solid transparent;
+		border-right: 0;
+		border-left: 15px solid #333;
+		content: '';
+		bottom: -10px;
+		height: 0;
+		left: 10px;
+		position: absolute;
+		width: 0;
+	}
+	
+	#popover4 .after {
+		border-top: 10px solid transparent;
+		border-left: 15px solid #333;
+		content: '';
+		top: -10px;
+		height: 0;
+		margin-left: -5px;
+		left: 50%;
+		position: absolute;
+		width: 0;
+	}
+
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-device-width: 480px) {
+	body {
+		padding: 0px;
+	}
+	div {
+		width: 320px !important;
+		clear: both;
+	}
+}
+

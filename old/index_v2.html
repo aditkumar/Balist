@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320, initial-scale=1, minimum-scale=0.45" />
+<title>My Balist</title>
+
+
+<style>
+
+body {
+	font-family: sans-serif;
+	background-image: url(http://thewirecutter.com/wp-content/themes/thewirecutter2/img/bg_light.png);
+	background-repeat: repeat;
+}
+
+#wrapper {
+	width: 80%;
+	margin-left:16px;
+	margin-right:16px;
+}
+
+#header {
+	background-color: none;
+	color: #AAA;
+	padding: 4px;
+}
+
+#header h1 {
+	margin: 4px;
+}
+
+.listtop{
+	/*background:#1B7EE0;*/
+	color: #AAA;
+	padding: 4px;
+}
+
+.listtop span {
+	font-weight:bold;
+}
+
+#left{
+	float: left;
+	width:45%;
+	/*border-left: 1px #CCC solid;*/
+	border-right: 1px #CCC solid;
+	margin-left:2%;
+}
+
+#right{
+	float:left;
+	width:45%;
+	margin-left:1em;
+	/*border-right: 1px #CCC solid;*/
+}
+
+.list li{
+	list-style: none;
+	padding: 0 0 0 16px;
+	position: relative;
+}
+
+.list li:before {
+	display: block;
+	content: "+";
+	position: absolute;
+	left: 0;
+}
+
+</style>
+
+
+</head>
+
+<body>
+<div id="wrapper">
+
+<div id="header">
+	<h1>Barry's Balist</h1>
+</div>
+
+<div id="left">
+	<div class="listtop">
+		<span>Eaten</span>
+	</div>
+
+	<ul class = "list">
+		<li>1</li>
+		<li>2</li>
+	</ul>
+</div>
+
+<div id="right">
+	<div class="listtop">
+		<span>Uneaten</span>
+	</div>
+
+	<ul class = "list">
+		<li>1</li>
+		<li>2</li>
+	</ul>
+</right>
+
+</div> <!--Closes wrapper div -->
+
+</body>
+
+</html>

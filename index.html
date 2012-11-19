@@ -1,160 +1,249 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=320, initial-scale=1, minimum-scale=0.45" />
-<title>My Balist</title>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
-<script type="text/javascript" src="script.js"></script>
-<script src="jquery.ui.position.min.js"></script>
- <script src="jquery.cf.popover.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <style>
+            body {
+                padding-top: 40px;
+                padding-bottom: 40px;
+                background-image: url(img/bg_light.png);
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
-<link rel="stylesheet" href="style.css">
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
 
-<script>
-$(document).ready(function(){
-	$(".neighborhood").hide();
-});
-</script>
 
-<script type="text/javascript">
-		jQuery(function ($) {
-			$('#trigger1').popover();
-			
-			$('#trigger2').popover({
-				my: 'center bottom',
-				at: 'center top',
-				offset: '0 -12px'
-			});
-			
-			$('#trigger3').popover({
-				my: 'left bottom',
-				at: 'right top',
-				offset: '-5px -5px'
-			});
-			
-			$('#trigger5').popover({
-				my: 'right bottom',
-				at: 'left top',
-				offset: '-5px -5px'
-			});
-			
-			$('#trigger4').popover({
-				my: 'center top',
-				at: 'center bottom',
-				offset: '0 12px'
-			});
-		});
-	</script>
-	
-</head>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <span class="span2"></span>
+                    <a class="brand" href="#">balist</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Dallas Restaurants</a></li>
+                                    <li><a href="#">Chicago Restaurants</a></li>
+                                    <li><a href="#">Coachella Protips</a></li>
+                                    <li><a href="#">Books</a></li>
+                                    <li><a href="#">Music</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Controls <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="addToggle">Toggle Adds</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
 
-<body>
-<div id="wrapper">
-<div id="header">
-	<h1>Barry's Balist</h1>
-	<!-- <select>
-		<option>All Cities</option>
-		<option>Chicago</option>
-		<option>New York</option>
-	</select> -->
+        <div class="container">
 
-	<a>Settings</a>
-	
-</div>
+            
+            <div class="row">
 
-<div id="eaten">
-<h1>Eaten</h1>
-<p>Done that.</p>
+    <!-- Left Buffer -->
+    <div class="span2">
+        <!--Blank buffer-->
+    </div>
+                
+<div class="span8">
+    <div class="balist">
 
-<ul id="eatenList">
-<li>
-	<a href="#" class="placeName">The Publican</a>
-	<span class="neighborhood">Fulton Market</span> 
-	<span class="note">Bacon</span>
-</li>
-<li>
-	<a href="#" class="placeName">Longman and Eagle</a>
-	<span class="neighborhood">Logan Square</span> 
-	<span class="note">Piglet</span>
-</li>
-<li>
-	<a href="#" class="placeName">DMK Burger Bar</a>
-	<span class="neighborhood">Lincoln Park</span> 
-	<span class="note">#3</span>
-</li>
-</ul>
+<!--List Header-->
+    <div class="row">
+        <div class="balistHead">
+            <h1>Dallas Restaurants</h1>
+            <!-- <p class="balistNote">Great restaurant town</p> -->
+        </div> <!-- closes balistHead div -->
+    </div> <!--closes top row-->
 
-<ul id = "addEatenItem">
-<li class="add">
-	<form name="addToEaten">
-            <input type="text" name="newEatenName" placeholder="Name">
-            <input type="text" name="newEatenNote" placeholder="Note">
-            <input type="button" value="Add to List" onclick="addEaten()">
-    </form>
-</li>
 
-</ul>
-</div>
+    <div class="span4" style="padding-right:30px">
 
-<div id="uneaten">
-<h1>Uneaten</h1>
-<p>Have to make it here</p>
+        <div class="listTop">
+            <h2>Uneaten</h2>
+            <a href="#" id="sortLeft" class="sort" rel="popover" data-content="Up" data-original-title="Sort"><i class="icon-list"></i></a>
+            <a href="#" class="addToggle"><i class="icon-plus"></i></a>
+        </div>
+        
+        <div class="addBox">
+        <span class="addForm">
+            <form name="addFormLeft">
+                <input type="text" class="addName" name="newLeftName" placeholder="add">
+            </form>
+        </span>
+        </div>
 
-<ul id="uneatenList">
-<li>
-	<a href="#" class="placeName">Maude's Liquor Bar</a>
-	<span class="neighborhood">Logan Square</span> 
-	<span class="note">Heard amazing things</span>
-</li>
-<li>
-	<a href="#" class="placeName">The Bristol</a>
-	<span class="neighborhood">Logan Square</span> 
-	<span class="note">Heard amazing things</span>
-</li>
-<li>
-	<a href="#" class="placeName">Belly Q</a>
-	<span class="neighborhood">West Loop</span> 
-	<span class="note">Heard amazing things</span>
-</li>
+        <ul class="balistListLeft">
+            <li>
+                <span class="itemTitle" rel="popover" data-content="Test" data-original-title="The Dram">The Dram</span>
+                <p class="note">Supposed to be good.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Ocean Prime</span>
+                <p class="note">Heard Good things</p>
+            </li>
+            <li>
+                <span class="itemTitle">Bee</span>
+                <p class="note">Enchilada place, Sarah said it was supposed to be good.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Abacus</span>
+                <p class="note">Apparently the tasting menu is the thing to do.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Victor Tango's</span>
+                <p class="note">Have tried going but don't take reservations.</p>
+            </li>
 
-</ul>
+        </ul>
 
-<ul id = "addUneatenItem">
-<li class="add">
-	<form name="addToUneaten">
-            <input type="text" name="newUneatenName" placeholder="Name">
-            <input type="text" name="newUneatenNote" placeholder="Note">
-            <input type="button" value="Add to List" onclick="addUneaten()">
-    </form>
-</li>
 
-</ul>
-</div>
+    </div> <!-- closes span4 -->
 
-<!-- <div id="detail">
-	<h1>Detail</h1>
-	<h2>The Publican</h2>
-	<div id = "placeDetail">
-		<span>837 W Fulton Market</span>
-		<span>Chicago, IL 60607</span>
-		<span>(312) 733-9555</span>
-	</div>
-	<a id="placeMap">
-		<img src="http://maps.google.com/maps/api/staticmap?center=41.886627%2C-87.648759&amp;language=en&amp;zoom=15&amp;markers=shadow%3Atrue%7Cicon%3Ahttp%3A%2F%2Fd1lf0h1wlh3cdl.cloudfront.net%2Fimg%2Fbiz_details_map_marker.png%7C41.886627%2C-87.648759&amp;client=gme-yelp&amp;sensor=false&amp;size=298x245&amp;signature=OFEdkhwywX7eJQVAGt48FHeHgfQ=" alt="Map of Business">
-	</a>
+    <div class="span4">
+        <div class="listTop">
+            <h2>Eaten</h2>
+            <a href="#" id="sortRight" class="sort"><i class="icon-list"></i></a>
+            <a href="#" class="addToggle"><i class="icon-plus"></i></a>
+        </div>
 
-</div> -->
+        <div class="addBox">
+        <span class="addForm">
+            <form name="addFormLeft">
+                <input type="text" class="addName" name="newLeftName" placeholder="add">
+            </form>
+        </span>
+        </div>
 
-<div id="footer"><span>Copyright Barry McCarel 2012<span></div>
+        <ul class="balistListRight">
+            <li>
+                <span class="itemTitle">Sissy's</span>
+                <!-- <span class="rec">Rec</span> -->
+                <p class="note">Great atmosphere and wonderful food. Get a bucket of chicken for the table.</p>
+            </li>
+            <li>
+                <span class="itemTitle">The Palm</span>
+                <p class="note">Nice steakhouse, but best part is private rooms in the back. Make sure to ask for the "Southwest" room.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Perry's</span>
+                <p class="note">Amazing steakhouse. Very high-end atmosphere and food. Highly suggest the turtle soup and the pork chop.</p>
+            </li>
+            <li>
+                <span class="itemTitle">The Velvet Taco</span>
+                <p class="note">Gourmet tacos (yes, those exist.) Pretty good, especially with their hotsauce. They also have some beers and a decent outdoor area.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Nonna</span>
+                <p class="note">Awesome Italian. Tough to get in so call a couple days in advance. Highly recommend their pastas and cocktails.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Bob's</span>
+                <p class="note">Nice steakhouse but lacking the atmosphere of Perry's or the privacy of The Palm back rooms. Still, absolutely awesome meat here.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Smoke</span>
+                <p class="note">Great high-end BBQ place. If it's on the menu get the Coffee Braised Brisket - it's a game-changer.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Meddlesome Moth</span>
+                <p class="note">Cool place, really big on small plates. A little chaotic with a big group - everyone is clamoring for stuff. Better with 2-6 people.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Deep Sushi</span>
+                <p class="note">Great little sushi spot in Deep Ellum (close to downtown). Not super high-end decor-wise but great service and tasty sushi. Patio is wonderful on a nice evening.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Serious Pizza</span>
+                <p class="note">Good place to go for a slice and a beer. In Deep Ellum so close to downtown. Have some TVs to watch games.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Oak</span>
+                <p class="note">Nice place. Very modern (in "design district"). Pricey, but food is fantastic.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Twisted Root Burger</span>
+                <p class="note">Pretty cool burger place in Deep Ellum. Very casual. Get the sweet potato chips.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Hopdoddy</span>
+                <p class="note">Awesome burger place. Delicious burgers and AMAZING beer selection. Some TVs around but definitely not a sports bar. Can't recommend enough.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Hibiscus</span>
+                <p class="note">Really nice high-end place. Grab a cocktail at the bar before sitting down - the bartenders are really knowledgable and will make you some samples if you're nice.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Canne Roso</span>
+                <p class="note">Gourmet pizzas. Food was great but not a lot of variety, so tough to order a bunch of interesting pizzas for the group. Best for groups of 2-4 I would say.</p>
+            </li>
+            <li>
+                <span class="itemTitle">Chesterfield's</span>
+                <p class="note">Great little cocktail spot. They were undergoing a "transition" between chefs when I went though so the food was a bit underwhelming.</p>
+            </li>
+        </ul>
 
-</div>
-	<!-- <form name = "toggles">
-		<input type="button" value="turn off neighborhoods" onclick="turnOffNeighborhood()">
-	</form> -->
-</body>
 
+    </div> <!--closes Span 4-->
+
+</div> <!--closes balist div-->
+               </div>
+                <div class="span2">
+                    
+                </div>
+            </div>
+
+            <hr>
+            
+
+            <footer>
+                <p>&copy; Company 2012</p>
+            </footer>
+
+        </div> <!-- /container -->
+
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <!-- <script>
+        //     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        //     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        //     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        //     s.parentNode.insertBefore(g,s)}(document,'script'));
+        // </script>
+        -->
+    </body>
 </html>
