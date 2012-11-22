@@ -22,3 +22,14 @@ def getListName(listid)
 		return nil
 	end
 end
+
+def getLists(uid)
+	conn = PG.connect(:host => 'localhost', :dbname => 'balist', :user => 'akumar', :password => nil)
+	res = conn.exec('SELECT listid, listname from balist.lists where uid=$1 order by listname asc', [uid])
+	conn.close
+	if res.num_tuples > 0
+		return res
+	else
+		return nil
+	end
+end

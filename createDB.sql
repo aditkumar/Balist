@@ -26,6 +26,7 @@ create table balist.listItems (itemID serial primary key,
 
 insert into balist.users (firstname, lastname, email) values ('Adit','Kumar','aditkumar@gmail.com');
 insert into balist.users (firstname, lastname, email) values ('Barry','McCardel','barrald1213@gmail.com');
-insert into balist.lists (listID, listName, lefthand, righthand, uid) values (DEFAULT,'Dallas Restaurants','Eaten','Uneaten', 2)
+insert into balist.lists (listID, listName, lefthand, righthand, uid) values (DEFAULT,'Dallas Restaurants','Eaten','Uneaten', 2);
+insert into balist.lists (listID, listName, lefthand, righthand, uid) values (DEFAULT,'Chicago Restaurants','Eaten','Uneaten', 2);
 
-copy balist.listItems (listid,lefthand,header,comment) from '/Users/akumar/Documents/Scratch/Balist/listItems.csv' delimiter as ',' csv header
+copy balist.listItems (listid,lefthand,header,comment) from '/Users/akumar/Documents/Scratch/Balist/listItems.csv' delimiter as ',' csv header;
