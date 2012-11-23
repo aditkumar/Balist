@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'pg'
 
-def openSql()
+	def openSql()
 	conn = PG.connect(:host => 'localhost', :dbname => 'balist', :user => 'akumar', :password => nil)	
 	return conn
 end

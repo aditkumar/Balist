@@ -1,7 +1,5 @@
 
 $(document).ready(function() {
-
-
 //hides add function initially
 	$(".addBox").hide();
 
@@ -36,8 +34,23 @@ $(document).ready(function() {
 			$.each(listitems, function(idx, itm) { mylist.append(itm); });
 	});
 
-//itemTitle popover function
+	//inline edit for new lists
+	$('.newList').click( function(e) {
+		e.stopPropagation()
+		$(e.currentTarget).replaceWith('<input type="text" class="newListInput" name="newList" value="Enter List Name" />')
+		$(e.currentTarget).select()
+	});
 
+//	$('.newListInput').click( function(e) { 
+//		e.stopPropagation() 
+//		$(e.currentTarget).select()
+//	});
+
+	$('.dropdown-menu').find('input').click(function (e) {
+	    e.stopPropagation();
+	  });
+	
+	//itemTitle popover function
 	$(function (){ 
 		$(".itemTitle").popover({
 			placement: wheretoplace,
@@ -59,5 +72,8 @@ $(document).ready(function() {
 	}
 
 
+
+
 });
- //closes document ready
+//closes document ready
+

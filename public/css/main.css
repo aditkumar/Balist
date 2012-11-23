@@ -128,12 +128,13 @@
 .itemTitle {
 	font-weight: bold;
 }
-
+.listItem:hover {
+	background-color:PapayaWhip;
+}
 .note {
 	font-size: .9em;
 	line-height: 1.1em;
 }
-
 .addBox {
 	width: 92%;
 }

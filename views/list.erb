@@ -16,14 +16,17 @@
                                     <% allLists.each do |list| %>
                                     <li><a href=<%='/list/'+list['listid'] %>><%= list['listname']%></a></li>
                                     <% end %>
+                                    <li><p class="newList">+ New List</div></li>
                                 </ul>
                             </li>
+                            <!--
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Controls <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" class="addToggle">Toggle Adds</a></li>
                                 </ul>
                             </li>
+                            -->
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
@@ -71,8 +74,10 @@
         <ul class="balistListLeft">
             <% listState[:leftList].each do |item| %>
                 <li>
-                <span class="itemTitle"><%= item['header'] %></span>
+                <div class="listItem">
+                <p class="itemTitle"><%= item['header'] %></p>
                 <p class="note"><%= item['comment'] %></p>
+                </div>
                 </li>
             <%end%>
         </ul>
@@ -98,8 +103,10 @@
         <ul class="balistListRight">
             <% listState[:rightList].each do |item| %>
                <li>
-                <span class="itemTitle"><%= item['header'] %></span>
+                <div class="listItem">
+                <p class="itemTitle"><%= item['header'] %></p>
                 <p class="note"><%= item['comment'] %></p>
+                </div>
             </li>
             <%end%>
         </ul>
