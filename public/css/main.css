@@ -160,8 +160,13 @@
 	margin-left: 16px;
 	width: 80%;
 }
-
-
+.newSubList {
+	width: 100%;
+}
+.newListTitle {
+	width: 412px;
+	text-align: center;
+}
 
 
 

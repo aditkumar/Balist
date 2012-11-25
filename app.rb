@@ -1,7 +1,13 @@
 require 'sinatra'
 require 'pg'
 
-	def openSql()
+
+
+#Classes
+
+
+# Methods
+def openSql()
 	conn = PG.connect(:host => 'localhost', :dbname => 'balist', :user => 'akumar', :password => nil)	
 	return conn
 end
@@ -40,13 +46,22 @@ def getLists(uid)
 	end
 end
 
+# Views 
+
 get '/' do 	
 	erb :index
 end
 
-get '/list/:listid' do 
+get '/lists/new' do
+	allLists = getLists(2)
+	erb :newList, :locals => {:allLists => allLists}
+end
+
+get '/lists/:listid' do 
 	allLists = getLists(2)
 	listInfo = getListInfo(params[:listid])
 	state = {:listName => listInfo['listname'], :lListName => listInfo['lefthand'], :rListName => listInfo['righthand'], :leftList => getListItems(params[:listid],true) , :rightList => getListItems(params[:listid],false) }
 	erb :list, :locals => { :listState => state, :allLists => allLists}
 end
+
+
