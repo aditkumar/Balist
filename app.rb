@@ -64,15 +64,14 @@ get '/' do
 end
 
 get '/lists/new' do
-	allLists = getLists(2)
-	erb :newList, :locals => {:allLists => allLists}
+	@allLists = getLists(2)
+	erb :newList
 end
 
 get '/lists/:listid' do 
-	allLists = getLists(2)
-	listInfo = getListInfo(params[:listid])
-	state = {:listName => listInfo['listname'], :lListName => listInfo['lefthand'], :rListName => listInfo['righthand'], :leftList => getListItems(params[:listid],true) , :rightList => getListItems(params[:listid],false) }
-	erb :list, :locals => { :listState => state, :allLists => allLists}
+	@allLists = getLists(2)
+	@listInfo = getListInfo(params[:listid])
+	erb 
 end
 
 
