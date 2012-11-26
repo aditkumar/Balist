@@ -46,19 +46,21 @@ DataMapper.finalize.auto_upgrade!
 # end
 
 def getListInfo(listid)
-	return Lists.all(:list_id => listid).last()
+	logger.info "getListInfo"
+	return List.all(:listID => listid).last()
 end
 
 def getListItems(listid, lefthand)
-	return	ListItem.all(:list_list_id => listid, :lefthand => lefthand)
+	logger.info(["getListItems", listid, lefthand])
+	return	ListItem.all(:list => {:listID => listid}, :lefthand => lefthand)
 end
 
 def getLists(uid)
-	return List.all(:user_uid => uid)
+	logger.info(["getLists",uid])
+	return List.all(:user => {:uid => uid})
 end
 
 # Views 
-
 get '/' do 	
 	erb :index
 end
@@ -69,9 +71,22 @@ get '/lists/new' do
 end
 
 get '/lists/:listid' do 
+	logger.info "Request Made"
 	@allLists = getLists(2)
-	@listInfo = getListInfo(params[:listid])
-	erb 
+	@currentList = getListInfo(params[:listid])
+	@leftList = getListItems(params[:listid],true)
+	@rightList = getListItems(params[:listid],false)
+	erb :list
 end
 
-
+post '/lists/new' do
+	l = List.new()
+	l.listName = params[:NewListTitle]
+	l.lefthand = params[:newLeftHand]
+	l.righthand = params[:newRightHand]
+	l.createdDate = Time.now
+	l.revisionDate = Time.now
+	l.user = User.all(:uid => 2).last()
+	l.save
+	redirect "/lists/#{l.listID}"
+end

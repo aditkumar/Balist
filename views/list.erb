@@ -1,125 +1,93 @@
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <span class="span2"></span>
-                    <a class="brand" href="#">balist</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <% allLists.each do |list| %>
-                                    <li><a href=<%='/list/'+list['listid'] %>><%= list['listname']%></a></li>
-                                    <% end %>
-                                    <li class="divider"></li>
-                                    <li><a href="/lists/new"> + New List</a></li>
-                                </ul>
-                            </li>
-                            <!--
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Controls <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" class="addToggle">Toggle Adds</a></li>
-                                </ul>
-                            </li>
-                        -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- Left Buffer -->
+        <div class="span2">
+            <!--Blank buffer-->
+        </div>
+
+        <div class="span8">
+            <div class="balist">
+
+                <!--List Header-->
+                <div class="row">
+                    <div class="balistHead">
+                        <h1><%= @currentList.listName %></h1>
+                        <!-- <p class="balistNote">Great restaurant town</p> -->
+                    </div> <!-- closes balistHead div -->
+                </div> <!--closes top row-->
+
+
+                <div class="span4" style="padding-right:30px">
+
+                    <div class="listTop">
+                        <h2><%= @currentList.lefthand %></h2>
+                        <a href="#" id="sortLeft" class="sort" rel="popover" data-content="Up" data-original-title="Sort"><i class="icon-list"></i></a>
+                        <a href="#" class="addToggle"><i class="icon-plus"></i></a>
+                    </div>
+
+                    <div class="addBox">
+                        <span class="addForm">
+                            <form name="addFormLeft">
+                                <input type="text" class="addName" name="newLeftName" placeholder="add">
+                            </form>
+                        </span>
+                    </div>
+
+                    <ul class="balistListLeft">
+                        <% @leftList.each do |item| %>
+                        <li>
+                            <div class="listItem">
+                                <p class="itemTitle"><%= item.header %></p>
+                                <p class="note"><%= item.comment %></p>
+                            </div>
+                        </li>
+                        <li>
+                            <form class="form-inline" action="#" method="post">
+                                
+                            </form>
+                        </li>
+                        <%end%>
                     </ul>
-                </div><!--/.nav-collapse -->
-            </div>
+
+
+                </div> <!-- closes span4 -->
+
+                <div class="span4">
+                    <div class="listTop">
+                        <h2><%= @currentList.righthand %></h2>
+                        <a href="#" id="sortRight" class="sort"><i class="icon-list"></i></a>
+                        <a href="#" class="addToggle"><i class="icon-plus"></i></a>
+                    </div>
+
+                    <div class="addBox">
+                        <span class="addForm">
+                            <form name="addFormLeft">
+                                <input type="text" class="addName" name="newLeftName" placeholder="add">
+                            </form>
+                        </span>
+                    </div>
+
+                    <ul class="balistListRight">
+                        <% @rightList.each do |item| %>
+                        <li>
+                            <div class="listItem">
+                                <p class="itemTitle"><%= item.header %></p>
+                                <p class="note"><%= item.comment %></p>
+                            </div>
+                        </li>
+                        <%end%>
+                    </ul>
+
+
+                </div> <!--closes Span 4-->
+
+            </div> <!--closes balist div-->
         </div>
+    <div class="span2">
+
     </div>
-
-    <div class="container">
-
-
-        <div class="row">
-
-            <!-- Left Buffer -->
-            <div class="span2">
-                <!--Blank buffer-->
-            </div>
-
-            <div class="span8">
-                <div class="balist">
-
-                    <!--List Header-->
-                    <div class="row">
-                        <div class="balistHead">
-                            <h1><%= listState[:listName] %></h1>
-                            <!-- <p class="balistNote">Great restaurant town</p> -->
-                        </div> <!-- closes balistHead div -->
-                    </div> <!--closes top row-->
-
-
-                    <div class="span4" style="padding-right:30px">
-
-                        <div class="listTop">
-                            <h2><%= listState[:lListName] %></h2>
-                            <a href="#" id="sortLeft" class="sort" rel="popover" data-content="Up" data-original-title="Sort"><i class="icon-list"></i></a>
-                            <a href="#" class="addToggle"><i class="icon-plus"></i></a>
-                        </div>
-
-                        <div class="addBox">
-                            <span class="addForm">
-                                <form name="addFormLeft">
-                                    <input type="text" class="addName" name="newLeftName" placeholder="add">
-                                </form>
-                            </span>
-                        </div>
-
-                        <ul class="balistListLeft">
-                            <% listState[:leftList].each do |item| %>
-                            <li>
-                                <div class="listItem">
-                                    <p class="itemTitle"><%= item['header'] %></p>
-                                    <p class="note"><%= item['comment'] %></p>
-                                </div>
-                            </li>
-                            <%end%>
-                        </ul>
-
-
-                    </div> <!-- closes span4 -->
-
-                    <div class="span4">
-                        <div class="listTop">
-                            <h2><%= listState[:rListName] %></h2>
-                            <a href="#" id="sortRight" class="sort"><i class="icon-list"></i></a>
-                            <a href="#" class="addToggle"><i class="icon-plus"></i></a>
-                        </div>
-
-                        <div class="addBox">
-                            <span class="addForm">
-                                <form name="addFormLeft">
-                                    <input type="text" class="addName" name="newLeftName" placeholder="add">
-                                </form>
-                            </span>
-                        </div>
-
-                        <ul class="balistListRight">
-                            <% listState[:rightList].each do |item| %>
-                            <li>
-                                <div class="listItem">
-                                    <p class="itemTitle"><%= item['header'] %></p>
-                                    <p class="note"><%= item['comment'] %></p>
-                                </div>
-                            </li>
-                            <%end%>
-                        </ul>
-
-
-                    </div> <!--closes Span 4-->
-
-                </div> <!--closes balist div-->
-            </div>
-            <div class="span2">
-
-            </div>
-        </div>
+</div>
 
 
