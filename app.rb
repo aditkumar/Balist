@@ -1,16 +1,43 @@
+require 'data_mapper'
 require 'sinatra'
-require 'pg'
+# require 'pg'
 
+DataMapper::setup(:default, 'postgres://akumar:@localhost:5432/balist')
 
-
-#Classes
-
+# Classes
+class ListItem 
+	include DataMapper::Resource
+	property :itemid, Serial, :key => true 
+	property :listID, Integer, :required => true
+	property :lefthand, Boolean
+	property :header, String
+	property :comment, Text
+	property :createdDate, DateTime
+	property :revisionDate, DateTime
+end
+class List
+	include DataMapper::Resource
+	property :uid, Integer, :required => true
+	property :listID, Serial, :key => true
+	property :listName, String, :required => true
+	property :lefthand, String
+	property :righthand, String
+	property :createdDate, DateTime
+	property :revisionDate, DateTime
+end
+class User
+	include DataMapper::Resource
+	property uid, Serial, :key => true
+	property firstname, String
+	property lastname, String
+	property email, String
+end
 
 # Methods
-def openSql()
-	conn = PG.connect(:host => 'localhost', :dbname => 'balist', :user => 'akumar', :password => nil)	
-	return conn
-end
+# def openSql()
+# 	conn = PG.connect(:host => 'localhost', :dbname => 'balist', :user => 'akumar', :password => nil)	
+# 	return conn
+# end
 
 def getListInfo(listid)
 	conn = openSql()
