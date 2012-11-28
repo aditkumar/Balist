@@ -3,9 +3,9 @@ require 'sinatra'
 # require 'pg'
 require 'dm-migrations'
 
-DataMapper::setup(:default, 'postgres://akumar:@localhost:5432/balist')
+#DataMapper::setup(:default, 'postgres://akumar:@localhost:5432/balist')
 
-#DataMapper::setup(:default,'postgres://xejwmmcrykifwk:jGHaax-hXNmkSsRdmFEgHqf-EX@ec2-54-243-180-54.compute-1.amazonaws.com:5432/dd0v7igsu1nu5l')
+DataMapper::setup(:default,'postgres://xejwmmcrykifwk:jGHaax-hXNmkSsRdmFEgHqf-EX@ec2-54-243-180-54.compute-1.amazonaws.com:5432/dd0v7igsu1nu5l')
 
 # Classes
 class ListItem 
