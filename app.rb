@@ -1,6 +1,5 @@
 require 'data_mapper'
 require 'sinatra'
-# require 'pg'
 require 'dm-migrations'
 
 #DataMapper::setup(:default, 'postgres://akumar:@localhost:5432/balist')
@@ -41,11 +40,6 @@ end
 DataMapper.finalize.auto_upgrade!
 
 # Methods
-
-# def openSql()
-# 	conn = PG.connect(:host => 'localhost', :dbname => 'balist', :user => 'akumar', :password => nil)	
-# 	return conn
-# end
 
 def getListInfo(listid)
 	logger.info "getListInfo"
@@ -91,4 +85,24 @@ post '/lists/new' do
 	l.user = User.all(:uid => 2).last()
 	l.save
 	redirect "/lists/#{l.listID}"
+end
+
+post '/lists/:listid' do
+	logger.info "Left:" << params[:newLeftElement].to_s
+	logger.info "Right:" << params[:newRightElement].to_s
+	if !params[:newLeftElement].nil?
+		lil = ListItem.new()
+		lil.lefthand = true
+		lil.header = params[:newLeftElement].to_s
+		lil.list = List.get(params[:listid])
+		lil.save
+	end
+	if !params[:newRightElement].nil?
+		lir = ListItem.new()
+		lir.lefthand = false
+		lir.header = params[:newRightElement].to_s
+		lir.list = List.get(params[:listid])
+		lir.save
+	end
+	redirect '/lists/' << params[:listid]
 end
