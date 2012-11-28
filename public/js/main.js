@@ -1,13 +1,4 @@
 
-$(document).ready(function() {
-//hides add function initially
-	$(".addBox").hide();
-
-//controls up top
-	$('.addToggle').click (function () {
-		$(".addBox").toggle("slow");
-	});
-
 //Sort Functions
 
 	//left sort
