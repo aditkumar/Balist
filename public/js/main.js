@@ -62,7 +62,11 @@
 	}
 
 	$(".addItemHeader").one('keypress', function() {
-		$(this).parent().children('.addItemComment').show();
+		$(this).parent().children('.addItemComment').fadeIn();
+	});
+
+	$('.itemTitle').click( function() { 
+		this.contentEditable = true;
 	});
 
 //closes document ready
