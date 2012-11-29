@@ -2,9 +2,9 @@ require 'data_mapper'
 require 'sinatra'
 require 'dm-migrations'
 
-#DataMapper::setup(:default, 'postgres://akumar:@localhost:5432/balist')
+DataMapper::setup(:default, 'postgres://akumar:@localhost:5432/balist')
 
-DataMapper::setup(:default,'postgres://xejwmmcrykifwk:jGHaax-hXNmkSsRdmFEgHqf-EX@ec2-54-243-180-54.compute-1.amazonaws.com:5432/dd0v7igsu1nu5l')
+#DataMapper::setup(:default,'postgres://xejwmmcrykifwk:jGHaax-hXNmkSsRdmFEgHqf-EX@ec2-54-243-180-54.compute-1.amazonaws.com:5432/dd0v7igsu1nu5l')
 
 # Classes
 class ListItem 
@@ -88,19 +88,21 @@ post '/lists/new' do
 end
 
 post '/lists/:listid' do
-	logger.info "Left:" << params[:newLeftElement].to_s
-	logger.info "Right:" << params[:newRightElement].to_s
-	if !params[:newLeftElement].nil?
+	logger.info "Left:" << params[:newLeftHeader].to_s
+	logger.info "Right:" << params[:newRightHeader].to_s
+	if !params[:newLeftHeader].nil?
 		lil = ListItem.new()
 		lil.lefthand = true
-		lil.header = params[:newLeftElement].to_s
+		lil.header = params[:newLeftHeader].to_s
+		lil.comment = params[:newLeftComment].to_s
 		lil.list = List.get(params[:listid])
 		lil.save
 	end
-	if !params[:newRightElement].nil?
+	if !params[:newRightHeader].nil?
 		lir = ListItem.new()
 		lir.lefthand = false
-		lir.header = params[:newRightElement].to_s
+		lir.header = params[:newRightHeader].to_s
+		lir.comment = params[:newRightComment].to_s
 		lir.list = List.get(params[:listid])
 		lir.save
 	end

@@ -61,9 +61,9 @@
 	    return 'right';
 	}
 
+	$(".addItemHeader").one('keypress', function() {
+		$(this).parent().children('.addItemComment').show();
+	});
 
-
-
-});
 //closes document ready
 
