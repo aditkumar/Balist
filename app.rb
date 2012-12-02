@@ -123,5 +123,6 @@ put '/listItems/update/' do
 end
 
 delete '/listItems/delete/' do
-	
+	li = ListItem.get params[:id]
+	li.destroy
 end

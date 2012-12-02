@@ -29,6 +29,7 @@
                         <% @leftList.each do |item| %>
                         <li>
                             <div class="listItem" id="<%=item.itemid%>">
+                                <span class="deleteItem icon-trash"></span>
                                 <p class= "itemTitle editable"> <%=escape_html item.header %></p>
                                 <p class="note editable"><%=escape_html item.comment %></p>
                             </div>

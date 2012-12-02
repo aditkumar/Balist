@@ -71,7 +71,17 @@
 		);
 
 	$('.deleteItem').click(function(){
-		alert("clicked!")
+		myElement = $(this);
+		parentID = this.parentElement.id;
+		$.ajax({
+			url : '/listItems/delete/',
+			type : 'DELETE',
+			success : function(data){ 
+				myElement.parents('li').remove()
+			},
+			data : {id : parentID}
+		})
+		
 	});
 
 	$('.editable').each(function() { 
