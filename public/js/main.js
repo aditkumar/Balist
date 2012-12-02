@@ -1,5 +1,5 @@
+ $(document).ready(function() {
 //Sort Functions
-
 	//left sort
 	$('#sortLeft').click( function (){
 		var mylist = $('.balistListLeft');
@@ -65,9 +65,24 @@
 		$(this).parent().children('.addItemComment').fadeIn();
 	});
 
-	$('.itemTitle').click( function() { 
-		this.contentEditable = true;
+	$(".listItem").hover( 
+		function() { $(this).children('.deleteItem').show(); },
+		function() { $(this).children('.deleteItem').hide(); }
+		);
+
+	$('.deleteItem').click(function(){
+		alert("clicked!")
 	});
 
-//closes document ready
-
+	$('.editable').each(function() { 
+		var parentID = this.parentElement.id; 
+		var headerOrComment = this.className;
+		$(this).editable('/listItems/update/', 
+		{
+		method : 'PUT',
+		submitdata : {id : parentID, headerOrComment : headerOrComment},
+		data : function(dataVal) {return $.trim(dataVal);},
+		placeholder : 'No comment. Click to add one'
+		})
+	});
+});//closes document ready

@@ -2,9 +2,9 @@ require 'data_mapper'
 require 'sinatra'
 require 'dm-migrations'
 
-#DataMapper::setup(:default, 'postgres://akumar:@localhost:5432/balist')
+DataMapper::setup(:default, 'postgres://akumar:@localhost:5432/balist')
 
-DataMapper::setup(:default,'postgres://xejwmmcrykifwk:jGHaax-hXNmkSsRdmFEgHqf-EX@ec2-54-243-180-54.compute-1.amazonaws.com:5432/dd0v7igsu1nu5l')
+#DataMapper::setup(:default,'postgres://xejwmmcrykifwk:jGHaax-hXNmkSsRdmFEgHqf-EX@ec2-54-243-180-54.compute-1.amazonaws.com:5432/dd0v7igsu1nu5l')
 
 # Classes
 class ListItem 
@@ -39,21 +39,22 @@ class User
 end
 DataMapper.finalize.auto_upgrade!
 
-# Methods
+# Helpers Methods
+helpers do 
+	def getListInfo(listid)
+		logger.info "getListInfo"
+		return List.all(:listID => listid).last()
+	end
 
-def getListInfo(listid)
-	logger.info "getListInfo"
-	return List.all(:listID => listid).last()
-end
+	def getListItems(listid, lefthand)
+		logger.info(["getListItems", listid, lefthand])
+		return	ListItem.all(:list => {:listID => listid}, :lefthand => lefthand)
+	end
 
-def getListItems(listid, lefthand)
-	logger.info(["getListItems", listid, lefthand])
-	return	ListItem.all(:list => {:listID => listid}, :lefthand => lefthand)
-end
-
-def getLists(uid)
-	logger.info(["getLists",uid])
-	return List.all(:user => {:uid => uid})
+	def getLists(uid)
+		logger.info(["getLists",uid])
+		return List.all(:user => {:uid => uid})
+	end
 end
 
 # Views 
@@ -88,8 +89,6 @@ post '/lists/new' do
 end
 
 post '/lists/:listid' do
-	logger.info "Left:" << params[:newLeftHeader].to_s
-	logger.info "Right:" << params[:newRightHeader].to_s
 	if !params[:newLeftHeader].nil?
 		lil = ListItem.new()
 		lil.lefthand = true
@@ -107,4 +106,22 @@ post '/lists/:listid' do
 		lir.save
 	end
 	redirect '/lists/' << params[:listid]
+end
+
+put '/listItems/update/' do
+	itemID = params[:id]
+	newVal = params[:value]
+	li = ListItem.get itemID
+	if params[:headerOrComment].include? 'itemTitle'
+		li.header = newVal
+	else
+		li.comment = newVal
+	end
+	li.revisionDate = Time.now
+	li.save
+	return newVal
+end
+
+delete '/listItems/delete/' do
+	
 end
