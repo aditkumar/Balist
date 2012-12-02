@@ -59,7 +59,7 @@ end
 
 # Views 
 get '/' do 	
-	erb :index
+	redirect '/lists/1'
 end
 
 get '/lists/new' do

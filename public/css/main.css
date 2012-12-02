@@ -167,18 +167,18 @@
 	width: 412px;
 	text-align: center;
 }
+body .addItemComment {
+	display: none;
+}
+body .itemSubmit {
+	display: none;
+}
 .deleteItem {
 	position: absolute;
 	top: 5px;
 	right: 0px;
 	display: none;
 	z-index: 999;
-}
-.addItemComment {
-	display: none;
-}
-.itemSubmit {
-	display: none;
 }
 
 
